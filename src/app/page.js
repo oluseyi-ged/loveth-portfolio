@@ -9,13 +9,13 @@ const services = [
     icon: FaInstagram,
     title: "Lifestyle Content",
     description:
-      "Authentic day-in-the-life content, personal vlogs, and real storytelling — the kind of content people actually stop scrolling for.",
+      "Authentic everyday content, personal vlogs, and real storytelling. The kind of content people actually stop scrolling for.",
   },
   {
     icon: FaTiktok,
     title: "Brand Social Media",
     description:
-      "Creating content for brands across Instagram and TikTok — from gifting campaigns and product features to full creative rollouts that convert.",
+      "Creating content for brands across Instagram and TikTok. From gifting campaigns and product features to full creative rollouts that convert.",
   },
 ];
 
@@ -80,11 +80,11 @@ export default function Home() {
         <p className="font-[Poppins] text-xs tracking-[0.3em] uppercase text-[#C97B8C] mb-6 fade-in">
           Content Creator &amp; Brand Partner
         </p>
-        <h1 className="font-[Cormorant_Garamond] text-7xl md:text-9xl font-light text-[#3D2C2C] leading-none mb-6 fade-in delay-1">
-          Loveth
+        <h1 className="font-[Cormorant_Garamond] text-6xl md:text-8xl font-light text-[#3D2C2C] leading-tight mb-6 fade-in delay-1">
+          Amubieya Loveth
         </h1>
         <p className="max-w-lg text-[#9B7B84] font-[Poppins] font-light text-base leading-relaxed mb-10 fade-in delay-2">
-          Crafting authentic moments that connect brands to culture — through
+          Crafting authentic moments that connect brands to culture, through
           lifestyle, fashion, and storytelling that actually feels real.
         </p>
         <div className="flex gap-4 flex-wrap justify-center fade-in delay-3">
@@ -177,14 +177,14 @@ export default function Home() {
               </div>
             </a>
             <a
-              href="/loveth-media-kit.pdf"
+              href="/loveth-resume.pdf"
               download
               className="flex items-center gap-3 px-7 py-4 rounded-2xl border border-[#E8A0B0] bg-white hover:bg-[#F9E4EA] hover:border-[#C97B8C] transition-all duration-200 group"
             >
               <span className="text-2xl">📋</span>
               <div className="text-left">
                 <p className="font-[Poppins] text-sm font-light text-[#3D2C2C] group-hover:text-[#8B4B5E] transition-colors">
-                  Media Kit
+                  Resume
                 </p>
                 <p className="font-[Poppins] text-xs text-[#C4A0AC]">PDF</p>
               </div>
@@ -254,7 +254,7 @@ export default function Home() {
           </h2>
           <p className="font-[Poppins] font-light text-sm text-[#9B7B84] leading-relaxed mb-10">
             Open to brand partnerships, campaigns, and collaborations. Slide
-            into my DMs or send an email — let&apos;s make something beautiful.
+            into my DMs or send an email. Let&apos;s make something beautiful.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
