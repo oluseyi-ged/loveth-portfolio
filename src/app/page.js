@@ -153,6 +153,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Downloads */}
+      <section className="py-20 px-6 bg-[#FFF8F5]">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="font-[Poppins] text-xs tracking-[0.3em] uppercase text-[#C97B8C] mb-4">
+            Resources
+          </p>
+          <h2 className="font-[Cormorant_Garamond] text-4xl md:text-5xl font-light text-[#3D2C2C] mb-10">
+            Download My Files
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/loveth-portfolio.pdf"
+              download
+              className="flex items-center gap-3 px-7 py-4 rounded-2xl border border-[#E8A0B0] bg-white hover:bg-[#F9E4EA] hover:border-[#C97B8C] transition-all duration-200 group"
+            >
+              <span className="text-2xl">📁</span>
+              <div className="text-left">
+                <p className="font-[Poppins] text-sm font-light text-[#3D2C2C] group-hover:text-[#8B4B5E] transition-colors">
+                  Portfolio File
+                </p>
+                <p className="font-[Poppins] text-xs text-[#C4A0AC]">PDF</p>
+              </div>
+            </a>
+            <a
+              href="/loveth-media-kit.pdf"
+              download
+              className="flex items-center gap-3 px-7 py-4 rounded-2xl border border-[#E8A0B0] bg-white hover:bg-[#F9E4EA] hover:border-[#C97B8C] transition-all duration-200 group"
+            >
+              <span className="text-2xl">📋</span>
+              <div className="text-left">
+                <p className="font-[Poppins] text-sm font-light text-[#3D2C2C] group-hover:text-[#8B4B5E] transition-colors">
+                  Media Kit
+                </p>
+                <p className="font-[Poppins] text-xs text-[#C4A0AC]">PDF</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Portfolio */}
       <section id="work" className="py-28 px-6 md:px-16 bg-[#FEF1F4]">
         <div className="max-w-5xl mx-auto">
