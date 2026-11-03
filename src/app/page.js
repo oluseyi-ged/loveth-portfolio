@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { FaInstagram, FaTiktok, FaLinkedinIn } from "react-icons/fa6";
+import Script from "next/script";
+import { FaInstagram, FaTiktok, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 import "./app.css";
 
 const services = [
@@ -20,24 +21,30 @@ const services = [
 ];
 
 const lifestyleReels = [
-  "DbOwLRsu02W",
-  "DVokxJxjW3Z",
-  "DXh50oijqnl",
-  "DSNcRiwiHPq",
-  "Dbar0biuvOY",
-  "DYeuWNwNI2y",
+  { type: "instagram", id: "DbOwLRsu02W" },
+  { type: "instagram", id: "DVokxJxjW3Z" },
+  { type: "tiktok", id: "7677891775222123796", url: "https://www.tiktok.com/@global.dayem/photo/7677891775222123796" },
+  { type: "instagram", id: "DXh50oijqnl" },
+  { type: "instagram", id: "DfCGmrbRzQj" },
+  { type: "instagram", id: "DSNcRiwiHPq" },
+  { type: "tiktok", id: "7692880637195291925", url: "https://www.tiktok.com/@global.dayem/video/7692880637195291925" },
+  { type: "instagram", id: "Dbar0biuvOY" },
+  { type: "instagram", id: "DYeuWNwNI2y" },
 ];
 
 const brandReels = [
-  "DXb2X04jNva",
-  "DYxCD3XI23Z",
-  "DXOgAbiDD2d",
-  "DbN9S2gIfJm",
-  "DRPcZqXgfqb",
-  "DapZi1cIyRN",
-  "DQ4LxBljMXd",
-  "DaLLSXXodN1",
-  "DYo4Q7Nsfj3",
+  { type: "instagram", id: "DXb2X04jNva" },
+  { type: "instagram", id: "DYxCD3XI23Z" },
+  { type: "instagram", id: "DXOgAbiDD2d" },
+  { type: "instagram", id: "DbN9S2gIfJm" },
+  { type: "instagram", id: "DRPcZqXgfqb" },
+  { type: "instagram", id: "DapZi1cIyRN" },
+  { type: "instagram", id: "DQ4LxBljMXd" },
+  { type: "instagram", id: "DaLLSXXodN1" },
+  { type: "instagram", id: "DYo4Q7Nsfj3" },
+  { type: "instagram", id: "DfPVMpgt26U" },
+  { type: "instagram", id: "DfHul29tP28" },
+  { type: "instagram", id: "DePHerlN8Ko" },
 ];
 
 const socials = [
@@ -194,6 +201,7 @@ export default function Home() {
       </section>
 
       {/* Portfolio */}
+      <Script src="https://www.tiktok.com/embed.js" strategy="lazyOnload" />
       <section id="work" className="py-28 px-6 md:px-16 bg-[#FEF1F4]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-20">
@@ -225,18 +233,29 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
-            {activeReels.map((id) => (
-              <div key={id} className="w-full max-w-[340px] rounded-2xl overflow-hidden shadow-sm border border-rose-100">
-                <iframe
-                  src={`https://www.instagram.com/reel/${id}/embed/`}
-                  width="340"
-                  height="500"
-                  frameBorder="0"
-                  scrolling="no"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                  className="w-full"
-                />
+            {activeReels.map((reel) => (
+              <div key={reel.id} className="w-full max-w-[340px] rounded-2xl overflow-hidden shadow-sm border border-rose-100">
+                {reel.type === "tiktok" ? (
+                  <blockquote
+                    className="tiktok-embed"
+                    cite={reel.url}
+                    data-video-id={reel.id}
+                    style={{ maxWidth: "340px", minWidth: "340px" }}
+                  >
+                    <section></section>
+                  </blockquote>
+                ) : (
+                  <iframe
+                    src={`https://www.instagram.com/reel/${reel.id}/embed/`}
+                    width="340"
+                    height="500"
+                    frameBorder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    className="w-full"
+                  />
+                )}
               </div>
             ))}
           </div>
@@ -270,6 +289,15 @@ export default function Home() {
               className="px-8 py-3 border border-[#E8A0B0] text-[#8B4B5E] text-xs tracking-widest uppercase font-[Poppins] font-light rounded-full hover:bg-[#F9E4EA] transition-colors"
             >
               DM on Instagram
+            </a>
+            <a
+              href="https://wa.me/2349060046163"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 border border-[#E8A0B0] text-[#8B4B5E] text-xs tracking-widest uppercase font-[Poppins] font-light rounded-full hover:bg-[#F9E4EA] transition-colors inline-flex items-center justify-center gap-2"
+            >
+              <FaWhatsapp className="text-base" />
+              WhatsApp
             </a>
           </div>
         </div>
